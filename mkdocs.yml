@@ -1,0 +1,9 @@
+site_name: CatatYuk
+site_url: https://catatyuk.com/
+theme:
+  name: material
+  palette: 
+    scheme: default
+    primary: blue
+    accent: blue
+  

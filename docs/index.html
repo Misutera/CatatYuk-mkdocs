@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CatatYuk — Simplify Your Financial Records</title>
+  <meta name="description" content="CatatYuk — Accounting & financial records for MSMEs, online sellers, and small business owners." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f6fbff; --muted:#6b7280; --accent:#0d6efd; --accent-2:#2387d9; --card:#fbfdff; --shadow: 0 12px 30px rgba(10,30,80,0.08); --soft-shadow: 0 8px 18px rgba(10,30,80,0.06); --radius:14px; --accent-dark:#0a4f9b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background: linear-gradient(180deg,var(--bg) 0%, #f1f6fb 100%);color:#0b1220;-webkit-font-smoothing:antialiased;line-height:1.45}
+    .site { max-width:1180px;margin:0 auto;padding:22px }
+
+    /* Header */
+    header.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;background:transparent}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:36px;height:36px;border-radius:8px;display:inline-grid;place-items:center;background:linear-gradient(135deg,#1266d6,#23a0e3);color:white;font-weight:800;font-family:Poppins, Inter, sans-serif}
+    .brand .name{font-weight:700;font-family:Poppins, Inter, sans-serif;font-size:16px}
+    nav.main-nav{display:flex;gap:18px;align-items:center;justify-content:center;margin-left:32px;margin-right:auto}
+    nav.main-nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:14px;padding:6px 8px;border-radius:8px}
+    nav.main-nav a:hover{color:#0b1220;background: rgba(10,25,50,0.02)}
+    .actions{display:flex;gap:12px;align-items:center}
+    .login{color:var(--muted);font-weight:600;font-size:14px;text-decoration:none}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:8px 14px;border-radius:8px;font-weight:700;text-decoration:none;box-shadow: 0 6px 20px rgba(12,30,80,0.08);transition:transform .18s ease, box-shadow .18s ease}
+    .cta:focus{outline:3px solid rgba(13,110,253,0.12)}
+    .cta:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(12,30,80,0.12)}
+
+    /* HERO */
+    .hero{margin-top:22px;display:grid;grid-template-columns:1fr 520px;gap:36px;align-items:center;padding:36px 24px;background: linear-gradient(180deg,#eef7ff 0%, rgba(238,247,255,0.6) 100%);border-radius:20px;box-shadow: var(--soft-shadow)}
+    .hero-left{padding-right:10px}
+    .hero-left h1{font-family:Poppins, Inter, sans-serif;font-weight:800;font-size:44px;margin:0 0 18px 0;color:#06102a;line-height:1.02}
+    .hero-left p.lead{margin:0 0 22px 0;color: #475569;font-size:16px;max-width:560px}
+    .hero-ctas{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none;box-shadow: 0 8px 24px rgba(12,30,80,0.08);display:inline-block;transition:transform .18s ease, box-shadow .18s ease}
+    .btn-primary:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(12,30,80,0.12)}
+    .btn-ghost{padding:12px 18px;border-radius:10px;background:transparent;border:2px solid rgba(12,30,80,0.06);color:var(--accent-2);font-weight:700;text-decoration:none;display:inline-block;transition:transform .18s ease}
+    .btn-ghost:hover{transform:translateY(-3px)}
+    .trust{display:flex;justify-content:center;gap:22px;align-items:center;margin-top:18px;color:#9aa4b2;font-size:13px}
+
+    /* Visual frame + micro-interactions */
+    .visual-frame{display:flex;justify-content:center;align-items:center;background: white;border-radius:18px;padding:18px;box-shadow: 0 20px 50px rgba(10,30,80,0.12);position:relative;min-height:360px;transition:transform .22s ease, box-shadow .22s ease}
+    .visual-frame:hover{transform:translateY(-6px);box-shadow:0 30px 70px rgba(10,30,80,0.16)}
+    .visual-frame img.screenshot{width:100%;height:auto;display:block;border-radius:8px;max-width:860px;transition:transform .28s cubic-bezier(.2,.9,.2,1), filter .28s ease}
+    .visual-frame:hover img.screenshot{transform:translateY(-6px) rotate(-0.6deg) scale(1.01);filter:brightness(1.02)}
+    .preview-badge{position:absolute;right:12px;top:12px;width:86px;height:86px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;box-shadow: 0 10px 30px rgba(12,30,80,0.12);transition:transform .28s ease}
+    .preview-badge:hover{transform:scale(1.06)}
+
+    /* subtle pulse -- respects prefers-reduced-motion */
+    @keyframes pulse { 0% { transform:scale(1); } 50% { transform:scale(1.03); } 100% { transform:scale(1); } }
+    @media (prefers-reduced-motion: no-preference){ .preview-badge{animation:pulse 2.8s ease-in-out infinite} }
+
+    /* FEATURES (original) */
+    .features{margin-top:42px;padding:46px 18px;background:#f7fbfc;border-radius:14px}
+    .features .heading{text-align:center;font-size:22px;font-weight:700;margin-bottom:8px}
+    .features .sub{color:var(--muted);text-align:center;margin-bottom:28px}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+    .feature-card{background:white;border-radius:12px;padding:18px;box-shadow: var(--soft-shadow);min-height:140px;transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease;will-change:transform}
+    .feature-card:hover{transform:translateY(-8px);box-shadow:0 22px 60px rgba(10,30,80,0.12)}
+    .feature-card .icon{width:44px;height:44px;border-radius:8px;display:inline-grid;place-items:center;background: linear-gradient(135deg,#eef6ff,#ecf8ff);margin-bottom:12px}
+    .feature-card h4{margin:0 0 8px 0;font-size:16px}
+    .feature-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.38}
+
+    /* POWER FEATURES (from image) */
+    .power-features{margin-top:42px}
+    .pf-row{display:grid;grid-template-columns: 1fr 520px;gap:36px;align-items:center;margin-bottom:48px;opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
+    .pf-row.is-visible{opacity:1;transform:translateY(0)}
+    .pf-row.reverse{grid-template-columns:520px 1fr}
+    .pf-image .card{background:white;border-radius:12px;padding:18px;box-shadow:var(--soft-shadow);transition:transform .22s ease}
+    .pf-image .card:hover{transform:translateY(-6px)}
+    .pf-image img{width:100%;display:block;border-radius:8px}
+    .pf-text h3{margin:0 0 12px 0;font-size:20px}
+    .pf-text p{margin:0 0 14px 0;color:var(--muted)}
+    .pf-text ul{margin:0;padding-left:20px;color:var(--muted)}
+    .pf-text li{margin-bottom:8px}
+
+    /* PRICING */
+    .pricing{margin-top:42px;padding:46px 18px;border-radius:12px;background:#f7fbfc}
+    .pricing .heading{text-align:center;font-size:22px;font-weight:700;margin-bottom:8px}
+    .pricing .sub{color:var(--muted);text-align:center;margin-bottom:28px}
+    .pricing-grid{display:flex;gap:18px;justify-content:center;align-items:flex-start}
+    .price-card{background:white;border-radius:12px;padding:26px;box-shadow: var(--soft-shadow);width:280px;text-align:left;border:1px solid rgba(10,20,40,0.03);transition:transform .22s cubic-bezier(.2,.9,.2,1), box-shadow .22s ease}
+    .price-card.popular{border:3px solid var(--accent);transform:translateY(-8px);box-shadow: 0 18px 40px rgba(12,30,80,0.12)}
+    .price-card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(10,30,80,0.12)}
+    .price-card h4{margin:0 0 6px 0}
+    .price-price{font-size:28px;font-weight:800;margin:10px 0}
+    .price-list{list-style:none;padding:0;margin:12px 0 18px 0;color:var(--muted)}
+    .price-list li{margin-bottom:8px}
+    .price-cta{display:block;padding:10px 12px;border-radius:8px;text-align:center;text-decoration:none;font-weight:700;transition:transform .18s ease, box-shadow .18s ease}
+    .price-ghost{border:2px solid rgba(12,30,80,0.06);background:transparent;color:var(--accent-dark)}
+    .price-primary{background:var(--accent);color:white}
+    .partner-note{margin-top:18px;text-align:center;color:var(--muted);padding:18px}
+
+    /* FAQ */
+    .faq{margin-top:42px;padding:46px 18px}
+    .faq h2{text-align:center;font-size:22px;font-weight:700;margin-bottom:6px}
+    .faq p.sub{color:var(--muted);text-align:center;margin-bottom:28px}
+    .accordion{max-width:860px;margin:0 auto}
+    .acc-item{border-top:1px solid rgba(10,20,40,0.04);padding:16px 0}
+    .acc-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700}
+    .acc-q[role="button"]{outline:none}
+    .acc-q span.arrow{display:inline-block;transition:transform .28s ease}
+    .acc-q.active span.arrow{transform:rotate(180deg)}
+
+    /* Animated answer: use max-height for smooth expansion */
+    .acc-a{
+      margin-top:8px;
+      color:var(--muted);
+      max-height:0;            /* collapsed */
+      overflow:hidden;
+      opacity:0;
+      transition: max-height .36s cubic-bezier(.2,.9,.2,1), opacity .28s ease, transform .36s ease;
+      transform:translateY(-6px);
+    }
+    .acc-a.open{
+      opacity:1;
+      transform:translateY(0);
+      /* when opening we set max-height via JS to the scrollHeight for smooth animation */
+    }
+
+    /* subtle hover and focus for questions */
+    .acc-q:hover{color:var(--accent-dark)}
+    .acc-q:focus{outline:3px solid rgba(13,110,253,0.08);border-radius:6px}
+
+    footer.page-foot{margin-top:36px;color:var(--muted);font-size:13px;text-align:center;padding:28px 0}
+
+    /* reduced motion preference */
+    @media (prefers-reduced-motion: reduce){
+      * { transition: none !important; animation: none !important }
+    }
+
+    /* responsive tweaks */
+    @media (max-width:1100px){ .hero{grid-template-columns:1fr 420px} .pf-row{grid-template-columns:1fr 360px} .pf-row.reverse{grid-template-columns:360px 1fr} }
+    @media (max-width:920px){ nav.main-nav{display:none} .hero{grid-template-columns:1fr;padding:28px} .visual-frame{order:-1;margin-bottom:20px;min-height:280px} .feature-grid{grid-template-columns:repeat(2,1fr)} .pf-row{grid-template-columns:1fr} .pf-row.reverse{grid-template-columns:1fr} .pricing-grid{flex-direction:column;align-items:center} }
+    @media (max-width:560px){ .brand .name{display:none} header.topbar{padding:6px 0} .hero-left h1{font-size:28px} .preview-badge{width:64px;height:64px;font-size:11px;right:8px;top:8px} }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header class="topbar" role="banner" aria-label="Top Navigation">
+      <div style="display:flex;align-items:center;gap:16px">
+        <div class="brand" aria-label="CatatYuk">
+          <div class="logo">CY</div>
+            <div class="name">Catat<span style="color:var(--accent)">Yuk</span></div>
+        </div>
+      </div>
+
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <a href="#">Features</a>
+        <a href="#">About Us</a>
+        <a href="#">How It Works</a>
+        <a href="#">Pricing</a>
+        <a href="#">Help Center</a>
+        <a href="info">FAQ</a>
+      </nav>
+
+      <div class="actions">
+        <a class="login" href="https://app.catatyuk.com/">Login</a>
+        <a class="cta" href="https://app.catatyuk.com/">Get Started</a>
+      </div>
+    </header>
+
+    <section class="hero" role="region" aria-label="Hero">
+      <div class="hero-left">
+        <h1>Simplify Your Financial Records with CatatYuk</h1>
+        <p class="lead">The easiest way for MSMEs, online sellers, and small businesses to track finances, generate reports, and make smarter business decisions.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="https://app.catatyuk.com/">Get Started</a>
+          <a class="btn-ghost" href="We have no demo :(">Watch Demo</a>
+        </div>
+        <div class="trust" aria-hidden>
+          <div style="display:flex;align-items:center;gap:10px">
+            <svg width="6" height="6" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#94a3b8"/></svg>
+            <span style="color:#475569;font-weight:600;margin-right:10px">No credit card required</span>
+            <svg width="6" height="6" viewBox="0 0 10 10" fill="none"><circle cx="5" cy="5" r="5" fill="#94a3b8"/></svg>
+            <span style="color:#475569;margin-left:8px">Cancel anytime</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="visual-frame" aria-hidden="true">
+        <div class="preview-badge" aria-hidden="true">PREVIEW</div>
+        <img class="screenshot" src="/mnt/data/95934b2a-6b9c-4efd-954a-fdc39aed23ac.png" alt="CatatYuk product screenshot" loading="lazy">
+      </aside>
+    </section>
+
+    <section class="features" aria-labelledby="why-heading">
+      <div class="heading" id="why-heading">Why Choose CatatYuk?</div>
+      <div class="sub">Our platform is designed specifically for the needs of small businesses and MSMEs in Indonesia.</div>
+      <div class="feature-grid" role="list">
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">💡</div><h4>Simple &amp; Intuitive</h4><p>No advanced accounting knowledge required. Our user-friendly interface makes financial recording easy for everyone.</p></div>
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">📊</div><h4>Automated Reporting</h4><p>Get instant access to professional financial reports including balance sheets and income statements.</p></div>
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">⬇️</div><h4>Easy Export</h4><p>Export your financial data to PDF or Excel with one click for tax reporting or sharing with stakeholders.</p></div>
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">📱</div><h4>Mobile Friendly</h4><p>Record transactions on the go from your smartphone or tablet with our responsive web app.</p></div>
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">☁️</div><h4>Cloud-Based</h4><p>Access your financial data anytime, anywhere with secure cloud storage and automatic backups.</p></div>
+        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">🔒</div><h4>Secure &amp; Private</h4><p>Your financial data is protected with bank-level security and encryption technologies.</p></div>
+      </div>
+    </section>
+
+    <section class="power-features" aria-labelledby="power-heading">
+      <div style="text-align:center;margin-bottom:18px"><h2 id="power-heading">Powerful Features for Your Business</h2>
+      <p style="color:var(--muted);max-width:760px;margin:8px auto 0">CatatYuk provides all the essential financial tools you need in one simple platform.</p></div>
+
+      <div class="pf-row animate-in">
+        <div class="pf-image">
+          <div class="card"><img src="/mnt/data/1e9926dc-4fd5-47de-9040-fae56accd909.png" alt="Automated Journal screenshot"></div>
+        </div>
+        <div class="pf-text">
+          <h3>Automated Journal &amp; Ledger</h3>
+          <p>Simply enter your transactions and CatatYuk automatically organizes them into professional accounting journals and ledgers.</p>
+          <ul>
+            <li>Easy transaction entry with categories</li>
+            <li>Automatic double-entry accounting</li>
+            <li>Search and filter transactions</li>
+            <li>Attach receipts and documents</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pf-row reverse animate-in" id="reports-row">
+        <div class="pf-text">
+          <h3>Financial Reports &amp; Analytics</h3>
+          <p>Get instant insights into your business performance with professionally generated financial reports.</p>
+          <ul>
+        <li>Balance sheet generation</li>
+        <li>Income statement (profit &amp; loss)</li>
+        <li>Cash flow tracking</li>
+        <li>Visual charts and graphs</li>
+          </ul>
+        </div>
+        <div class="pf-image">
+          <div class="card"><img src="/mnt/data/95934b2a-6b9c-4efd-954a-fdc39aed23ac.png" alt="Financial reports screenshot"></div>
+        </div>
+      </div>
+      <script>
+        // Swap text and image order for phone screens
+        function swapReportsRow() {
+          const row = document.getElementById('reports-row');
+          if (!row) return;
+          if (window.innerWidth <= 920) {
+        // If not already swapped
+        if (row.firstElementChild.classList.contains('pf-text')) {
+          row.insertBefore(row.lastElementChild, row.firstElementChild);
+        }
+          } else {
+        // Restore original order if needed
+        if (row.firstElementChild.classList.contains('pf-image')) {
+          row.insertBefore(row.lastElementChild, row.firstElementChild);
+        }
+          }
+        }
+        window.addEventListener('resize', swapReportsRow);
+        window.addEventListener('DOMContentLoaded', swapReportsRow);
+      </script>
+
+      <div class="pf-row animate-in">
+        <div class="pf-image">
+          <div class="card"><img src="/mnt/data/1e9926dc-4fd5-47de-9040-fae56accd909.png" alt="Export screenshot (placeholder)"></div>
+        </div>
+        <div class="pf-text">
+          <h3>Export &amp; Tax Preparation</h3>
+          <p>Export your financial data in various formats for tax filing, stakeholder reporting, or further analysis.</p>
+          <ul>
+            <li>One-click PDF export</li>
+            <li>Excel/CSV data export</li>
+            <li>Tax-ready financial statements</li>
+            <li>Custom date range reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" aria-labelledby="pricing-heading">
+      <div class="heading" id="pricing-heading">Simple, Transparent Pricing</div>
+      <div class="sub">Choose the plan that fits your business needs</div>
+
+      <div class="pricing-grid" role="list">
+        <div class="price-card animate-in" role="listitem">
+          <h4>Starter</h4>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Perfect for new businesses</div>
+          <div class="price-price">Rp79k <span style="font-size:14px;color:var(--muted);font-weight:600">/month</span></div>
+          <ul class="price-list">
+            <li>1 Organization Database</li>
+            <li>Basic financial reports</li>
+            <li>PDF export</li>
+            <li>Up to 5 user / organization</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="price-cta price-ghost" href="https://app.catatyuk.com/">Get Started</a>
+        </div>
+
+        <div class="price-card popular animate-in" role="listitem" aria-label="Most popular">
+          <div style="background:var(--accent);color:white;padding:6px 10px;border-radius:8px;display:inline-block;font-weight:800;margin-bottom:10px">MOST POPULAR</div>
+          <h4>Business</h4>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">For growing businesses</div>
+          <div class="price-price">Rp159k <span style="font-size:14px;color:var(--muted);font-weight:600">/month</span></div>
+          <ul class="price-list">
+            <li>1 Organization Database</li>
+            <li>Advanced financial reports</li>
+            <li>PDF & Excel export</li>
+            <li>Up to 30 user / organization</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="price-cta price-primary" href="https://app.catatyuk.com/">Get Started</a>
+        </div>
+
+        <div class="price-card animate-in" role="listitem">
+          <h4>Custom Plan</h4>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">For established businesses</div>
+          <div class="price-price">Rp259k <span style="font-size:14px;color:var(--muted);font-weight:600">/month</span></div>
+          <ul class="price-list">
+            <li>Everything in Business</li>
+            <li>Custom financial reports</li>
+            <li>Custom organization amount</li>
+            <li>Custom user amount</li>
+            <li>Consulting support</li>
+          </ul>
+          <a class="price-cta price-ghost" href="https://go.tera.cafe/sales">Contact Sales</a>
+        </div>
+      </div>
+
+      <div class="partner-note">We provide custom packages for multi-business organizations. Contact our sales team for a custom proposal and sample pricing based on your needs.</div>
+      <div style="text-align:center;margin-top:14px"><a class="btn-ghost" href="https://go.tera.cafe/sales">Contact Sales</a></div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <p class="sub">Find answers to common questions about CatatYuk</p>
+
+      <div class="accordion" role="list">
+        <div class="acc-item" role="listitem">
+          <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-0" data-index="0">Do I need accounting knowledge to use CatatYuk?<span class="arrow">▾</span></div>
+          <div class="acc-a" id="acc-0" data-index="0">Not at all! CatatYuk is designed for business owners without accounting experience. Our intuitive interface guides you through the process, and the system handles the complex accounting rules automatically.</div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-1" data-index="1">Can I access CatatYuk on my mobile phone?<span class="arrow">▾</span></div>
+          <div class="acc-a" id="acc-1" data-index="1">Yes! CatatYuk is a web-based application that works on any device with a web browser, including smartphones and tablets. Record transactions on the go and check your financial reports anytime, anywhere.</div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-2" data-index="2">Is my financial data secure?<span class="arrow">▾</span></div>
+          <div class="acc-a" id="acc-2" data-index="2">Absolutely. We use bank-level encryption to protect your data, and our servers are hosted in secure facilities. We never share your financial information with third parties without your explicit consent.</div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-3" data-index="3">Can I use CatatYuk for tax reporting?<span class="arrow">▾</span></div>
+          <div class="acc-a" id="acc-3" data-index="3">Yes! CatatYuk generates financial reports that can be used for tax preparation. You can export your data in formats accepted by tax authorities or share them with your tax consultant.</div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-4" data-index="4">What if I need help using CatatYuk?<span class="arrow">▾</span></div>
+          <div class="acc-a" id="acc-4" data-index="4">We offer comprehensive support through our help center, video tutorials, and email support. Business and Custom plans also include priority support and training sessions.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-foot" role="contentinfo">© <span id="year"></span> CatatYuk — Trusted by hundreds of businesses across Indonesia</footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ accordion behaviour (single-open) with smooth height animation and keyboard support
+    const accButtons = document.querySelectorAll('.acc-q');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function closeAllAnswers(){
+      document.querySelectorAll('.acc-a').forEach(a => {
+        a.style.maxHeight = null;
+        a.classList.remove('open');
+      });
+      document.querySelectorAll('.acc-q').forEach(q => {
+        q.classList.remove('active');
+        q.setAttribute('aria-expanded','false');
+      });
+    }
+
+    accButtons.forEach(btn => {
+      const idx = btn.getAttribute('data-index');
+      const answer = document.querySelector('.acc-a[data-index="'+idx+'"]');
+
+      // helper to open with smooth height animation
+      function open(){
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded','true');
+        answer.classList.add('open');
+        if(!prefersReduced){
+          // set to scrollHeight so max-height transition is smooth
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          // reduced motion: show immediately
+          answer.style.maxHeight = 'none';
+        }
+      }
+
+      function close(){
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded','false');
+        answer.classList.remove('open');
+        if(!prefersReduced){
+          // collapse smoothly by setting to 0
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          // force a frame so transition happens
+          requestAnimationFrame(()=>{
+            answer.style.maxHeight = '0px';
+          });
+        } else {
+          answer.style.maxHeight = '0px';
+        }
+      }
+
+      // handle click
+      btn.addEventListener('click', ()=>{
+        const isOpen = answer.classList.contains('open');
+        // single-open: close others first
+        closeAllAnswers();
+        if(!isOpen){ open(); }
+      });
+
+      // keyboard support: Enter / Space toggles
+      btn.addEventListener('keydown',(e)=>{
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          btn.click();
+        }
+      });
+
+      // ensure answers are collapsed on load
+      answer.style.maxHeight = '0px';
+    });
+
+    // Intersection Observer for reveal-on-scroll micro-interactions
+    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.12 };
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements with .animate-in and .pf-row
+    document.querySelectorAll('.animate-in, .pf-row').forEach(el => observer.observe(el));
+
+    // small accessibility: prefers-reduced-motion respected via CSS; no JS animation if reduced-motion
+    if(prefersReduced){
+      document.querySelectorAll('.animate-in, .pf-row').forEach(el=>el.classList.add('is-visible'));
+      document.querySelectorAll('.acc-a').forEach(a=>{ a.style.maxHeight = null; a.classList.add('open'); });
+    }
+  </script>
+</body>
+</html>
