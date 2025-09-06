@@ -63,8 +63,6 @@ Yes, certain information is required for CatatYuk to function properly (e.g., ac
 
 ## II. Table summarizing the Personal Data processing carried out by CatatYuk
 
-> The original policy contains a detailed table describing purposes, legal bases, categories of data, how data is collected, typical retention periods, and the responsible entity. Below is a summarized Markdown-friendly version.
-
 | Purpose of processing | Legal basis | Categories of data processed | How we collect it | Typical retention period | Controller / Responsible entity |
 |---|---|---|---|---|---|
 | Account creation & management | Performance of contract; legitimate interest (account security) | Identification: name, email, phone, business name, role; authentication data (hashed password); account settings | Collected directly from you when you register or update profile | Until account deletion + 90 days (for operational backup), unless longer required by law | PT CatatYuk Teknologi Indonesia |
