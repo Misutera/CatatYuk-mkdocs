@@ -1,11 +1,58 @@
-# CatatYuk Privacy Policy
+# Legal Information
 
-## Introduction
+Welcome to CatatYuk's legal documentation. We are committed to transparency and compliance
+in serving MSMEs, online sellers, and small businesses. Please review these terms carefully as they
+govern your use of our services.
+
+> Last updated: September 2025
+
+## Terms & Conditions
+
+### 1. Acceptance of Terms
+By accessing and using CatatYuk's web and mobile applications, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+
+CatatYuk reserves the right to modify these terms at any time. Your continued use of the service following the posting of changes constitutes your acceptance of such changes.
+
+### 2. Account Creation & Responsibilities
+You must create an account to access our services. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You must provide accurate and complete information during registration. You must immediately notify CatatYuk of any unauthorized use of your account. CatatYuk reserves the right to terminate accounts that violate these terms.
+
+### 3. Data Usage Policy
+CatatYuk collects and processes personal data as described in our Privacy Policy. By using our services, you consent to such processing and you warrant that all data provided by you is accurate.
+
+You retain all rights to your data. CatatYuk does not claim ownership of your data but requires certain rights to provide the service:
+
+- We store and process your data to provide and improve our services.
+- We may use anonymized, aggregated data for analytical purposes.
+- We implement high-level security measures to protect your data.
+
+### 4. Subscription & Payment Terms
+- Subscription fees are billed in advance on a monthly or annual basis.
+- All payments are non-refundable unless otherwise specified.
+- CatatYuk reserves the right to change subscription fees upon reasonable notice.
+- Failure to pay subscription fees may result in service suspension or termination.
+
+### 5. Limitations of Liability
+CatatYuk services are provided on an “as is” and “as available” basis, without any warranties or representations of any kind, whether express, implied, statutory, or otherwise. This includes, but is not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, and availability.
+
+To the fullest extent permitted by law, CatatYuk and its affiliates, partners, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages. This includes, without limitation, loss of profits, revenue, goodwill, business opportunities, or other intangible losses.
+
+However, CatatYuk acknowledges its responsibility for any direct damages resulting from:
+- Data loss, corruption, or errors caused solely by CatatYuk’s systems, infrastructure, or technical failures.
+- Failure to deliver services or features explicitly listed in the subscribed package.
+
+### 6. Termination
+CatatYuk may terminate or suspend your account and access to the service immediately, without prior notice or liability, for any reason, including without limitation if you breach the Terms.
+
+Upon termination, your right to use the service will immediately cease. You may terminate your account at any time by contacting support or through your account settings.
+
+## Privacy Policy
+
+### Introduction
 CatatYuk is committed to being a trusted partner for MSMEs, online sellers, and small businesses by simplifying financial recording and reporting. We place great value on transparency, security, and building long-term relationships with our users based on trust. Part of that commitment is safeguarding your personal and financial data and respecting your choices about how that data is used.
 
 CatatYuk processes personal and financial information of Indonesian residents. We comply with applicable data protection laws, in particular **Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)**, and related implementing regulations. It is our duty to inform you of our commitments in this respect and to adopt this privacy policy (the “Privacy Policy”).
 
-### Our commitments
+#### Our commitments
 - We respect your privacy and your choices.
 - We implement privacy and security by design and by default across our services.
 - We work only with trusted service providers and partners who meet our security requirements.
@@ -13,7 +60,7 @@ CatatYuk processes personal and financial information of Indonesian residents. W
 - We will not use or share your data in ways we have not disclosed.
 - We respect and facilitate the rights afforded to data subjects under UU PDP and we will respond to valid requests in accordance with the law.
 
-### Exercising your rights
+#### Exercising your rights
 You have rights including (but not limited to):
 - obtain information about how your data is processed;
 - access and obtain a copy of your personal data;
@@ -27,9 +74,9 @@ To exercise any of these rights, please contact us at **privacy@catatyuk.com** o
 
 ---
 
-## I. PURPOSES OF THIS PRIVACY POLICY
+### I. PURPOSES OF THIS PRIVACY POLICY
 
-### Who are the Data Controllers?
+#### Who are the Data Controllers?
 The primary data controller for the processing of your Personal and Financial Data is:
 
 **PT CatatYuk Teknologi Indonesia**  
@@ -38,30 +85,30 @@ Email: **privacy@catatyuk.com**
 
 CatatYuk determines how and why your data is processed, ensures the implementation of security and data protection measures, and fulfills its obligations under the Applicable Regulations.
 
-### To whom does this Privacy Policy apply?
+#### To whom does this Privacy Policy apply?
 This Privacy Policy applies to:
 - All visitors to the CatatYuk website.
 - Users of the CatatYuk application.
 - Business partners or organizations that subscribe to CatatYuk services.
 
-### What does “Personal and Financial Data” mean?
+#### What does “Personal and Financial Data” mean?
 “Personal and Financial Data” includes:
 - Personal identifiers such as name, email, phone number, and business details.
 - Financial records you input into CatatYuk, such as transaction history, invoices, expenses, and account details.
 - Device and technical information, such as IP addresses, browser type, and cookies.
 
-### How do we collect your data?
+#### How do we collect your data?
 We may collect your data in the following ways:
 - **Directly from you:** when you create an account, input transactions, upload documents, or contact our support team.
 - **Automatically:** through technologies such as cookies, tracking logs, or app analytics.
 - **Indirectly:** from service providers, partners, or integrations you choose to enable (e.g., payment gateways, banking connections, or third-party accounting tools).
 
-### Is providing your data mandatory?
+#### Is providing your data mandatory?
 Yes, certain information is required for CatatYuk to function properly (e.g., account details, transactions). If you choose not to provide this information, you are not able to use the features of the service.
 
 ---
 
-## II. Table summarizing the Personal Data processing carried out by CatatYuk
+### II. Table summarizing the Personal Data processing carried out by CatatYuk
 
 | Purpose of processing | Legal basis | Categories of data processed | How we collect it | Typical retention period | Controller / Responsible entity |
 |---|---|---|---|---|---|
@@ -78,9 +125,9 @@ Yes, certain information is required for CatatYuk to function properly (e.g., ac
 
 ---
 
-## III. Profiling, Access & Security
+### III. Profiling, Access & Security
 
-### 1. Profiling and automated decision-making
+#### 1. Profiling and automated decision-making
 **How we use profiling (if at all)**  
 To help you run your business more efficiently, CatatYuk may perform limited automated analysis on account and transaction data — for example:
 - generating aggregated insights and trends (cashflow categories, expense breakdowns);
@@ -93,7 +140,7 @@ Such profiling is performed either on the basis of our legitimate interest to im
 **No fully automated decisions that have legal or similarly significant effects**  
 We do not make fully automated decisions that produce legal effects or similarly significant consequences for you (for example, account suspension, denial of access, or other materially adverse outcomes) without human review. Any automated signals that could influence a significant decision will be reviewed by a CatatYuk employee before action is taken.
 
-### 2. Who may access your Personal, Financial Data, and Payment Data
+#### 2. Who may access your Personal, Financial Data, and Payment Data
 **Internal access** – The following CatatYuk teams may access your data for legitimate business purposes and only on a need-to-know basis:
 - Customer Success & Support (to troubleshoot issues and help you onboard);
 - Engineering & Operations (to maintain, run and secure the platform);
@@ -112,12 +159,12 @@ All internal access is governed by role-based permissions, least-privilege contr
 
 We never sell your Personal or Financial Data. If CatatYuk (or its assets) is ever transferred in a sale, we will provide notice and continue to protect your data under contract; the buyer would become the new controller for transferred data.
 
-### 3. Where we store data and cross-border transfers
+#### 3. Where we store data and cross-border transfers
 **Storage location** – By default CatatYuk stores and processes data on secure servers located in Jakarta. Where we must transfer or process data outside Indonesia (for example, to a global cloud provider region or a partner), we do so only with appropriate safeguards.
 
 **Cross-border transfers** – Cross-border transfers are performed in accordance with UU No. 27/2022 and implementing rules. We rely on one or more of the following safeguards before transferring personal data abroad: (i) transfer to a country with an adequate level of protection; (ii) appropriate safeguards such as contractual clauses or binding policies; or (iii) explicit consent from the data subject if required by law. CatatYuk documents and monitors cross-border transfers and can provide details on request.
 
-### 4. Security measures and breach handling
+#### 4. Security measures and breach handling
 **Technical & organisational measures** – We apply industry-standard technical and organisational safeguards appropriate to the sensitivity of the data, including but not limited to:
 - encryption in transit (TLS) and at rest;
 - strong access controls and role-based permissions (least privilege);
@@ -128,7 +175,7 @@ We also require our processors and partners to implement comparable security mea
 
 **Data breach notification** – If CatatYuk becomes aware of a personal data breach that is likely to result in a risk to the rights and freedoms of data subjects, we will follow our incident response procedures and notify affected individuals and the competent authorities in accordance with UU No. 27/2022 and applicable implementing rules.
 
-### 5. Your rights and how to exercise them (under UU PDP)
+#### 5. Your rights and how to exercise them (under UU PDP)
 Under UU No. 27/2022 you have rights as a Data Subject. These include the right to:
 - obtain clear information on how we process your data;
 - access and obtain a copy of your Personal Data;
@@ -140,7 +187,7 @@ Under UU No. 27/2022 you have rights as a Data Subject. These include the right 
 - request portability of Personal Data you provided in a structured, machine-readable format; and
 - object to automated decision-making or profiling that produces legal or similarly significant effects.
 
-### How to exercise your rights
+#### How to exercise your rights
 You may exercise your rights by:
 1. Using the data management / privacy tools in your CatatYuk account (recommended); or
 2. Sending an email to **privacy@catatyuk.com** with the subject line: “Data Privacy Request_[Your name]”, describing the request and the email used for the account.
@@ -153,7 +200,7 @@ If you are not satisfied with our response, you may lodge a complaint with the c
 
 ---
 
-## 7. Contact & Data Protection Officer (DPO)
+### 7. Contact & Data Protection Officer (DPO)
 If you have questions about profiling, access, transfers, or any privacy matter, contact us at:
 
 **PT CatatYuk Teknologi Indonesia**  
@@ -164,18 +211,18 @@ If CatatYuk appoints a Data Protection Officer (DPO) or local privacy lead, we w
 
 ---
 
-## References & legal framework
+### References & legal framework
 This Section is prepared in line with Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP) and related guidance on cross-border transfers, rights of data subjects, and breach notification. Key references and explanatory materials include government publications and third-party summaries of the PDP Law.
 
-### A. Indonesian law & official regulation
+#### A. Indonesian law & official regulation
 1. Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (PDP Law) — Undang-Undang; No. 27/2022; Republik Indonesia; enacted: 17 October 2022. Official source: Badan Pembinaan dan Pengembangan Hukum (BPK).
 
-### B. Indonesian tax / bookkeeping / audit guidance (industry sources)
+#### B. Indonesian tax / bookkeeping / audit guidance (industry sources)
 - New Regulation Concerning Procedures for Recording and Bookkeeping — DDTC Tax Newsletter. URL: https://perpajakan.ddtc.co.id/publikasi/newsletter/new-regulation-concerning-procedures-for-recording-and-bookkeeping
 - Who Needs a Financial Audit in Indonesia? — Map Resources Indonesia. URL: https://mapresourcesindonesia.com/who-needs-a-financial-audit-in-indonesia/
 - Understanding Legal Requirements for Corporate Bookkeeping in Indonesia — Map Resources Indonesia. URL: https://mapresourcesindonesia.com/understanding-legal-requirements-for-corporate-bookkeeping-in-indonesia/
 
-### C. Practical legal commentary & guides (cross-border / PDP implementation)
+#### C. Practical legal commentary & guides (cross-border / PDP implementation)
 - One Asia: https://oneasia.legal/en/6148
 - Norton Rose Fulbright briefing: https://www.nortonrosefulbright.com/en/knowledge/publications/31bce8f0/highlights-of-indonesias-personal-data-protection-law
 - Chambers & Partners practice guide: https://practiceguides.chambers.com/practice-guides/data-protection-privacy-2025/indonesia/trends-and-developments
