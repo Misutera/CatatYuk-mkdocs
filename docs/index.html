@@ -187,15 +187,15 @@
       <nav class="main-nav" role="navigation" aria-label="Main">
         <a href="#features" onclick="event.preventDefault();document.getElementById('features').scrollIntoView({behavior:'smooth'});">Features</a>
         <a href="#">About Us</a>
-        <a href="#">How It Works</a>
+        <a href="#how-it-works" onclick="event.preventDefault();document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'});">How It Works</a>
         <a href="#price" onclick="event.preventDefault();document.getElementById('price').scrollIntoView({behavior:'smooth'});">Pricing</a>
-        <a href="#">Help Center</a>
+        <a href="contact">Help Center</a>
         <a href="#faq" onclick="event.preventDefault();document.getElementById('faq').scrollIntoView({behavior:'smooth'});">FAQ</a>
       </nav>
 
       <div class="actions">
         <a class="login" href="https://app.catatyuk.com/">Login</a>
-        <a class="cta" href="https://app.catatyuk.com/">Get Started</a>
+        <a class="cta" href="https://app.catatyuk.com/getstarted">Get Started</a>
       </div>
     </header>
 
@@ -204,7 +204,7 @@
         <h1>Simplify Your Financial Records with Catat<span style="color:var(--accent)">Yuk</span></h1>
         <p class="lead">The easiest way for MSMEs, online sellers, and small businesses to track finances, generate reports, and make smarter business decisions.</p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://app.catatyuk.com/">Get Started</a>
+          <a class="btn-primary" href="https://app.catatyuk.com/getstarted">Get Started</a>
           <a class="btn-ghost" href="We have no demo :(">Watch Demo</a>
         </div>
         <div class="trust" aria-hidden>
@@ -227,18 +227,54 @@
       <div class="heading" id="why-heading">Why Choose CatatYuk?</div>
       <div class="sub">Our platform is designed specifically for the needs of small businesses and MSMEs in Indonesia.</div>
       <div class="feature-grid" role="list">
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">💡</div><h4>Simple &amp; Intuitive</h4><p>No advanced accounting knowledge required. Our user-friendly interface makes financial recording easy for everyone.</p></div>
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">📊</div><h4>Automated Reporting</h4><p>Get instant access to professional financial reports including balance sheets and income statements.</p></div>
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">⬇️</div><h4>Easy Export</h4><p>Export your financial data to PDF or Excel with one click for tax reporting or sharing with stakeholders.</p></div>
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">📱</div><h4>Mobile Friendly</h4><p>Record transactions on the go from your smartphone or tablet with our responsive web app.</p></div>
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">☁️</div><h4>Cloud-Based</h4><p>Access your financial data anytime, anywhere with secure cloud storage and automatic backups.</p></div>
-        <div class="feature-card animate-in" role="listitem"><div class="icon" aria-hidden="true">🔒</div><h4>Secure &amp; Private</h4><p>Your financial data is protected with bank-level security and encryption technologies.</p></div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Simple and Intuitive.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Simple &amp; Intuitive</h4>
+          <p>No advanced accounting knowledge required. Our user-friendly interface makes financial recording easy for everyone.</p>
+        </div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Automated Recording.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Automated Reporting</h4>
+          <p>Get instant access to professional financial reports including balance sheets and income statements.</p>
+        </div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Easy Export.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Easy Export</h4>
+          <p>Export your financial data to Excel with one click for tax reporting or sharing with stakeholders.</p>
+        </div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Mobile Friendly.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Mobile Friendly</h4>
+          <p>Record transactions on the go from your smartphone or tablet with our responsive web app.</p>
+        </div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Cloud Based.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Cloud-Based</h4>
+          <p>Access your financial data anytime, anywhere with secure cloud storage and automatic backups.</p>
+        </div>
+        <div class="feature-card animate-in" role="listitem">
+          <div class="icon" aria-hidden="true">
+            <img src="icons/Secure & Private.svg" alt="" style="width:32px;height:32px;display:block;">
+          </div>
+          <h4>Secure &amp; Private</h4>
+          <p>Your financial data is protected with bank-level security and encryption technologies.</p>
+        </div>
       </div>
     </section>
 
     <!-- NEW: How It Works section inserted here -->
     <section class="how-works animate-in" aria-labelledby="how-heading">
-      <div class="title" id="how-heading">How CatatYuk Works</div>
+      <div class="title" id="how-it-works">How CatatYuk Works</div>
       <div class="sub">Get started in minutes with these three simple steps</div>
 
       <div class="steps" role="list" aria-hidden="false">
@@ -265,7 +301,7 @@
         </div>
       </div>
 
-      <a class="more-details" href="#features">More Details</a>
+      <!-- <a class="more-details" href="#features">More Details</a> -->
     </section>
 
     <section class="power-features" aria-labelledby="features">
@@ -332,7 +368,7 @@
           <h3>Export &amp; Tax Preparation</h3>
           <p>Export your financial data in various formats for tax filing, stakeholder reporting, or further analysis.</p>
           <ul>
-            <li>One-click PDF export</li>
+            <!-- <li>One-click PDF export</li> -->
             <li>Excel/CSV data export</li>
             <li>Tax-ready financial statements</li>
             <li>Custom date range reporting</li>
@@ -347,32 +383,17 @@
 
       <div class="pricing-grid" role="list">
         <div class="price-card animate-in" role="listitem">
-          <h4>Basic</h4>
-          <div style="color:var(--muted);font-size:13px;margin-top:6px">Perfect for new businesses</div>
-          <div class="price-price">Rp79k <span style="font-size:14px;color:var(--muted);font-weight:600">/month</span></div>
-          <ul class="price-list">
-            <li>1 Organization Database</li>
-            <li>Basic financial reports</li>
-            <li>PDF export</li>
-            <li>Up to 5 user / organization</li>
-            <li>Priority support</li>
-          </ul>
-          <a class="price-cta price-ghost" href="https://app.catatyuk.com/">Get Started</a>
-        </div>
-
-        <div class="price-card popular animate-in" role="listitem" aria-label="Most popular">
-          <div style="background:var(--accent);color:white;padding:6px 10px;border-radius:8px;display:inline-block;font-weight:800;margin-bottom:10px">MOST POPULAR</div>
           <h4>Business</h4>
           <div style="color:var(--muted);font-size:13px;margin-top:6px">For growing businesses</div>
           <div class="price-price">Rp159k <span style="font-size:14px;color:var(--muted);font-weight:600">/month</span></div>
           <ul class="price-list">
             <li>1 Organization Database</li>
             <li>Advanced financial reports</li>
-            <li>PDF & Excel export</li>
+            <li>Excel export</li>
             <li>Up to 30 user / organization</li>
             <li>Priority support</li>
           </ul>
-          <a class="price-cta price-primary" href="https://app.catatyuk.com/">Get Started</a>
+          <a class="price-cta price-ghost" href="https://app.catatyuk.com/getstarted">Get Started</a>
         </div>
 
         <div class="price-card animate-in" role="listitem">
@@ -386,7 +407,7 @@
             <li>Custom user amount</li>
             <li>Consulting support</li>
           </ul>
-          <a class="price-cta price-ghost" href="https://go.tera.cafe/sales">Contact Sales</a>
+          <a class="price-cta price-ghost" href="mailto:support@catatyuk.com?subject=CatatYuk%20Custom%20Plan%20Inquiry">Contact Sales</a>
         </div>
       </div>
 
@@ -396,7 +417,7 @@
             We offer custom packages for multi-business organizations, featuring tiered volume pricing and flexible commercial and technical options. Packages can include discounted per-account rates and a dashboard for bulk provisioning and monitoring. Contact our sales team for a personalized proposal and sample pricing based on your number of businesses and expected account volume.
         </div></div>
       </div>
-      <div style="text-align:center;margin-top:14px"><a class="btn-ghost" href="https://go.tera.cafe/sales">Contact Sales</a></div>
+      <div style="text-align:center;margin-top:14px"><a class="btn-ghost" href="mailto:support@catatyuk.com">Contact Sales</a></div>
     </section>
 
     <section class="faq" aria-labelledby="faq">
@@ -416,7 +437,7 @@
 
         <div class="acc-item" role="listitem">
           <div class="acc-q" role="button" tabindex="0" aria-expanded="false" aria-controls="acc-2" data-index="2">Is my financial data secure?<span class="arrow">▾</span></div>
-          <div class="acc-a" id="acc-2" data-index="2">Absolutely. We use bank-level encryption to protect your data, and our servers are hosted in secure facilities. We never share your financial information with third parties without your explicit consent.</div>
+          <div class="acc-a" id="acc-2" data-index="2">Absolutely. We use  high-level encryption to protect your data, and our servers are hosted in secure facilities. We never share your financial information with third parties without your explicit consent.</div>
         </div>
 
         <div class="acc-item" role="listitem">
@@ -431,7 +452,7 @@
       </div>
     </section>
 
-    <footer class="page-foot" role="contentinfo">© <span id="year"></span> CatatYuk — Trusted by hundreds of businesses across Indonesia</footer>
+    <footer class="page-foot" role="contentinfo">© <span id="year"></span> CatatYuk</footer>
   </div>
 
   <script>
