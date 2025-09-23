@@ -2,6 +2,8 @@ site_name: CatatYuk
 site_url: https://catatyuk.com/
 theme:
   name: material
+  logo: icons/logo-white.svg
+  favicon: icons/favicon.ico
   palette: 
     scheme: default
     primary: blue
